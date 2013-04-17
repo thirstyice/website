@@ -1,0 +1,90 @@
+<!--Copyright (c) 2013 Go software-->
+  
+<!--Copying and distribution of this file, with or without modification, is permitted in any medium without royalty provided the copyright notice and this notice are preserved.-->
+
+<!--This file is offered as-is,without warranty of any kind.-->
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title id="title">Tauran's Clock</title>
+		<script src="../jquery.js"></script>
+		<script src="script.js"></script>
+		<script src="../roll.js"></script>
+		<link rel="stylesheet" type="text/css" href="clock.css"/>
+		<link rel="stylesheet" href="../style.css"/>
+	</head>
+	<body>
+		<ul id="menu">
+            <li><a href="../index.html">Polar clock</a></li>
+			<li><a href="../clock/time.html">Text clock</a></li>
+            <li>
+                <a href="#">Minecraft Rules</a>
+                <ul id="server">
+                    <li><a href="../rules/server.html">Serverwide</a></li>
+                    <li><a href="../rules/city.html">The City</a></li>
+                    <li><a href="../rules/north.html">North Mountainous Rep.</a></li>
+                    <li><a href="../rules/south.html">South Mountainous Rep.</a></li>
+                    <!--<li><a href="#">Shambala</a></li>-->
+                    <li><a href="../rules/cameron.html">Cameron's place</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Programs</a>
+                <ul id="down">
+                    <li><a href="../Downloads/downloads.html">Downloads</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onClick="roll()">Pervolvo</a></li>
+			<li><a href="../more_info/info.html">More info</a></li>
+        </ul>
+		<div id="timezones"  class="panel">
+			<a>Longitude:</a>
+            <input id="txtbox" type="text" size="3"/>
+            <a>˚</a>
+            <select id="hemisphere">
+                <option value="West">West</option>
+                <option value="East">East</option>
+            </select>
+            <input id="button" type="button" value="Calculate" onClick="timezone()"/>
+            <br/>
+            <img src="map.png" usemap="#timemap"></img>
+            <map name="timemap">
+                <area shape="rect" coords="0,0,22,350" onClick="area1()"/>
+                <area shape="rect" coords="22,0,95,350" onClick="area2()"/>
+                <area shape="rect" coords="95,0,170,350" onClick="area3()"/>
+                <area shape="rect" coords="170,0,240,350" onClick="area4()"/>
+                <area shape="rect" coords="240,0,310,350" onClick="area5()"/>
+                <area shape="rect" coords="310,0,383,350" onClick="area6()"/>
+                <area shape="rect" coords="383,0,454,350" onClick="area7()"/>
+                <area shape="rect" coords="454,0,526,350" onClick="area8()"/>
+                <area shape="rect" coords="526,0,597,350" onClick="area9()"/>
+                <area shape="rect" coords="597,0,669,350" onClick="area10()"/>
+                <area shape="rect" coords="669,0,750,350" onClick="area1()"/>        
+            </map>
+		</div>
+		<a href="#" id="recalc" >Timezones</a>
+		<div>
+			<table>
+				<tr>
+					<td>
+						<p id="thing"></p>
+					</td>
+					<td>
+						<p id="otherthing"></p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p id='clock' class='GIANT'></p>
+					</td>
+					<td>
+						<p id='date' class='GIANT'></p>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<p id="pizza" class="GIANT">GET A BROWSER WITH JAVASCRIPT OR TURN JAVASCRIPT ON!</p>
+	</body>
+</html>

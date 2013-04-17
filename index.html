@@ -1,0 +1,74 @@
+<!--Copyright (c) 2013 Tauran Wood-->
+  
+<!--Copying and distribution of this file, with or without modification, is permitted in any medium without royalty provided the copyright notice and this notice are preserved.-->
+
+<!--This file is offered as-is,without warranty of any kind.-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+		<script src="jquery.js"></script>
+		<script src="resize.js"></script>
+		<script src="roll.js"></script>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="clock/rotary.js"></script>
+		<link rel="stylesheet" type="text/css" href="clock/clock.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+    <body onresize="resize()">
+		<ul id="menu">
+            <li><a href="index.html">Polar clock</a></li>
+			<li><a href="clock/time.html">Text clock</a></li>
+            <li>
+                <a href="#">Minecraft Rules</a>
+                <ul id="server">
+                    <li><a href="rules/server.html">Serverwide</a></li>
+                    <li><a href="rules/city.html">The City</a></li>
+                    <li><a href="rules/north.html">North Mountainous Rep.</a></li>
+                    <li><a href="rules/south.html">South Mountainous Rep.</a></li>
+                    <!--<li><a href="#">Shambala</a></li>-->
+                    <li><a href="rules/cameron.html">Cameron's place</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Programs</a>
+                <ul id="down">
+                    <li><a href="Downloads/downloads.html">Downloads</a></li>
+                    <!--<li><a href="roll.html">Requests</a></li>-->
+                </ul>
+            </li>
+            <li><a href="#" onClick="roll()">Pervolvo</a></li>
+			<li><a href="../more_info/info.html">More info</a></li>
+
+        </ul>
+        <div id="timezones"  class="panel" width="750px">
+			<a>Longitude:</a>
+            <input id="txtbox" type="text" size="3"/>
+            <a>˚</a>
+            <select id="hemisphere">
+                <option value="West">West</option>
+                <option value="East">East</option>
+            </select>
+            <input id="button" type="button" value="Calculate" onClick="timezone()"/>
+            <br/>
+            <img src="clock/map.png" usemap="#timemap"></img>
+            <map name="timemap">
+                <area shape="rect" coords="0,0,22,350" onClick="area1()"/>
+                <area shape="rect" coords="22,0,95,350" onClick="area2()"/>
+                <area shape="rect" coords="95,0,170,350" onClick="area3()"/>
+                <area shape="rect" coords="170,0,240,350" onClick="area4()"/>
+                <area shape="rect" coords="240,0,310,350" onClick="area5()"/>
+                <area shape="rect" coords="310,0,383,350" onClick="area6()"/>
+                <area shape="rect" coords="383,0,454,350" onClick="area7()"/>
+                <area shape="rect" coords="454,0,526,350" onClick="area8()"/>
+                <area shape="rect" coords="526,0,597,350" onClick="area9()"/>
+                <area shape="rect" coords="597,0,669,350" onClick="area10()"/>
+                <area shape="rect" coords="669,0,750,350" onClick="area1()"/>        
+            </map>
+        </div>
+		<a href="#" id="recalc">Timezones</a>
+		<br/>
+		<canvas id="canvas" height="2230px;" width="2230px;" style="border:0px">Your browser does not support this clock</canvas>
+	</body>
+</html>

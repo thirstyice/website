@@ -1,0 +1,33 @@
+/*Copyright (c) 2013 Tauran Wood*/ 
+
+/*Copying and distribution of this file, with or without modification, is permitted in any medium without royalty provided the copyright notice and this notice are preserved.*/
+
+/*This file is offered as-is,without warranty of any kind.*/
+
+body{
+	font-family:"Times New Roman";
+}
+h1{
+	font-family:"Digital";
+	display:inline;
+}
+ol{
+	font-size:17px;
+}
+.main {
+	font-weight:bolder;
+	color:#f00000;
+}
+.sub_title {
+	font-weight:bold;
+	color:#0f1fff;
+}
+.sub {
+	color:#0f1fff;
+}
+.sub li{
+	color:#0f1fff;
+}
+.sentence {
+	color:#00ce00;
+}

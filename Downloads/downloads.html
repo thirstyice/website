@@ -1,0 +1,167 @@
+<!--Copyright (c) 2013 Tauran Wood-->
+  
+<!--Copying and distribution of this file, with or without modification, is permitted in any medium without royalty provided the copyright notice and this notice are preserved.-->
+
+<!--This file is offered as-is,without warranty of any kind.-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<script src="../jquery.js"></script>
+		<script src="../roll.js"></script>
+		<link rel="stylesheet" href="../style.css"/>
+		<link rel="stylesheet" href="downloads.css"/>
+	</head>
+	<body>
+		<ul id="menu">
+            <li><a href="../index.html">Polar clock</a></li>
+			<li><a href="../clock/time.html">Text clock</a></li>
+            <li>
+                <a href="#">Minecraft Rules</a>
+                <ul id="server">
+                    <li><a href="../rules/server.html">Serverwide</a></li>
+                    <li><a href="../rules/city.html">The City</a></li>
+                    <li><a href="../rules/north.html">North Mountainous Rep.</a></li>
+                    <li><a href="../rules/south.html">South Mountainous Rep.</a></li>
+                    <!--<li><a href="#">Shambala</a></li>-->
+                    <li><a href="../rules/cameron.html">Cameron's place</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Programs</a>
+                <ul id="down">
+                    <li><a href="../Downloads/downloads.html">Downloads</a></li>
+                    <!--<li><a href="../roll.html">Requests</a></li>-->
+                </ul>
+            </li>
+            <li><a href="#" onClick="roll()">Pervolvo</a></li>
+			<li><a href="../more_info/info.html">More info</a></li>
+        </ul>
+		<h1>Downloads</h1>
+		<ol>
+			<li><a class="main" href="mdtime-2_0_3.tar.gzip">
+				mdtime
+				<p>Millidays on the *NIX command line, ^C to quit (also does other time-related things; read the included man page</p>
+			</p></li>
+			<br/>
+			<li><a class="main" href="ANGLES.8xp">
+				ANGLES
+				<p>Finds missing angles in right angled triangles</p>
+			</p></li>
+			<br/>
+			<li><a class="main" href="BINCONV.8xp">
+				BINCONV
+				<p>Converts to/from various bases</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="BTRIG.8xp">
+				BTRIG
+				<p>Executes baseline trigonometry</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="COTES.8xp">
+				COTES
+				<p>Trouve un côté qui manque dans une triangle rectangulaire</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="DATECONV.8xp">
+				DATECONV
+				<p>Converts a date to the format seen on the homepage</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="FACTORS.8xp">
+				FACTORS
+				<p>Gives common factors of between one and four numbers</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="FACTRIAL.8xp">
+				FACTRIAL
+				<p>Factors any trinomial</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="FACTRNEG.8xp">
+				FACTRNEG
+				<p>Same as factors, but gives you negative factors aswell</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="FACTRNEG.8xp">
+				FORMQUAD
+				<p>Simplifies use of the quadratic formula</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="ID.8xp">
+				ID
+				<p>Uses student id number to deduce various things abou you (or anyone else)</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="INTERSEC.8xp">
+				INTERSEC
+				<p>Determines the intersect of two lines on a graph (input standard format [ax+by=c])</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="ISOTRIG.8xp">
+				ISOTRIG
+				<p>Finds missing two sides in right angled isosceles(spelling?) triangles</p>
+				<p style="color:#ce0000">Still in beta, do not rely on this program</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="MIXRAD.8xp">
+				MIXRAD
+				<p>Converts radicals to/from mixed/entire format</p>
+			</p></li>
+			<br/>
+			<li><a class="main" href="MIXRADFR.8xp">
+				MIXRADFR
+				<p>Similar to MIXRAD but in french (a translation of the description for mixrad would be nice, french speakers)</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="MULTIPLE.8xp">
+				MULTIPLE
+				<p>Finds common multiples of 1 to 4 numbers (del button to quit)</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="ORDDATE.8xp">
+				ORDDATE
+				<p>Gives today's ordinal date (make sure your clock is set correctly){ti-84 only}</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="PRIMEFAC.8xp">
+				PRIMEFAC
+				<p>Gives prime factors of a number (in a division table!)</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="PRIMFIND.8xp">
+				PRIMFIND
+				<p>Gives a list of prime numbers (del button to quit)</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="SIDES.8xp">
+				SIDES
+				<p>Finds missing sides in right angled triangles</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="TIME.8xp">
+				TIME
+				<p>Gives current time in the format shown on the homepage (make sure your clock is set correctly){ti-84 only}</p>
+			</p></li>
+			<br/>
+            <li><a class="main" href="TMCONV.8xp">
+				TMCONV
+				<p>Converts time to the format shown on the homepage</p>
+			</p></li>
+            <br/>
+            <li><a class="main" href="Tauran's Time.zip">
+				Dashboard widget (text)
+				<p>Basically the same as the text clock, but for offline use on the dashboard of a mac. Dashboard polar clock pending</p>
+			</p></li>
+			<li><a class="main" href="Update.zip">
+				Minecraft Updater
+				<p>Windows-only</p>
+			</p></li>
+		</ol>
+		<a>Thanks to Daniel for making alot of the stuff here</a>
+		<br/>
+		<a>this thanks to will reside here untill i make a page for it</a>
+	</body>
+</html>
