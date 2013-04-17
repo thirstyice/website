@@ -10,12 +10,13 @@
 		<meta charset=utf-8 />
 		<title id="title">Tauran's Clock</title>
 		<script src="../jquery.js"></script>
+		<script src="../resize.js"></script>
 		<script src="script.js"></script>
 		<script src="../roll.js"></script>
 		<link rel="stylesheet" type="text/css" href="clock.css"/>
 		<link rel="stylesheet" href="../style.css"/>
 	</head>
-	<body>
+	<body onresize="resize()">
 		<ul id="menu">
             <li><a href="../index.html">Polar clock</a></li>
 			<li><a href="../clock/time.html">Text clock</a></li>
