@@ -48,8 +48,6 @@
 		D12384ED171F379A00BE66F3 /* info.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = info.html; sourceTree = "<group>"; };
 		D12384EE171F379A00BE66F3 /* Logo.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Logo.svg; sourceTree = "<group>"; };
 		D12384EF171F379A00BE66F3 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
-		D12384F1171F379A00BE66F3 /* PoweredByMacOSX.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PoweredByMacOSX.gif; sourceTree = "<group>"; };
-		D12384F2171F379A00BE66F3 /* PoweredByMacOSXLarge.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PoweredByMacOSXLarge.gif; sourceTree = "<group>"; };
 		D12384F3171F379A00BE66F3 /* resize.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = resize.js; sourceTree = "<group>"; };
 		D12384F4171F379A00BE66F3 /* roll.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = roll.js; sourceTree = "<group>"; };
 		D12384F6171F379A00BE66F3 /* cameron.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = cameron.html; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 				D12384EA171F379A00BE66F3 /* index.html */,
 				D12384EB171F379A00BE66F3 /* jquery.js */,
 				D12384EC171F379A00BE66F3 /* more_info */,
-				D12384F0171F379A00BE66F3 /* New Folder With Items */,
 				D12384F3171F379A00BE66F3 /* resize.js */,
 				D12384F4171F379A00BE66F3 /* roll.js */,
 				D12384F5171F379A00BE66F3 /* rules */,
@@ -137,15 +134,6 @@
 				D12384EF171F379A00BE66F3 /* style.css */,
 			);
 			path = more_info;
-			sourceTree = "<group>";
-		};
-		D12384F0171F379A00BE66F3 /* New Folder With Items */ = {
-			isa = PBXGroup;
-			children = (
-				D12384F1171F379A00BE66F3 /* PoweredByMacOSX.gif */,
-				D12384F2171F379A00BE66F3 /* PoweredByMacOSXLarge.gif */,
-			);
-			path = "New Folder With Items";
 			sourceTree = "<group>";
 		};
 		D12384F5171F379A00BE66F3 /* rules */ = {
