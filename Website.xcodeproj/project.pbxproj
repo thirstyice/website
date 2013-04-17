@@ -43,7 +43,6 @@
 		D12384E6171F379A00BE66F3 /* U.8xp */ = {isa = PBXFileReference; lastKnownFileType = file; path = U.8xp; sourceTree = "<group>"; };
 		D12384E7171F379A00BE66F3 /* Update.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = Update.zip; sourceTree = "<group>"; };
 		D12384E8171F379A00BE66F3 /* DS-DIGI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGI.TTF"; sourceTree = "<group>"; };
-		D12384E9171F379A00BE66F3 /* index copy.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "index copy.html"; sourceTree = "<group>"; };
 		D12384EA171F379A00BE66F3 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		D12384EB171F379A00BE66F3 /* jquery.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
 		D12384ED171F379A00BE66F3 /* info.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = info.html; sourceTree = "<group>"; };
@@ -70,7 +69,6 @@
 				D12384C3171F379A00BE66F3 /* clock */,
 				D12384C9171F379A00BE66F3 /* Downloads */,
 				D12384E8171F379A00BE66F3 /* DS-DIGI.TTF */,
-				D12384E9171F379A00BE66F3 /* index copy.html */,
 				D12384EA171F379A00BE66F3 /* index.html */,
 				D12384EB171F379A00BE66F3 /* jquery.js */,
 				D12384EC171F379A00BE66F3 /* more_info */,
