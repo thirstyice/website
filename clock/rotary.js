@@ -178,7 +178,7 @@ function run() {
 	var t = setTimeout('run()', 432);
 	rotarytime();
     if (time()==0) {
-	
+		date();
 	}
 }
 
