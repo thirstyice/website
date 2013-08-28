@@ -44,10 +44,7 @@ ctx.strokeStyle = '#00ce00';
 ctx.stroke();
 
 
-if (time()==Math.floor(time())) {
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	rotarytime();
-}
+
 }
 
 
@@ -173,6 +170,11 @@ function time() {
 
 function run() {
 	var t = setTimeout('run()', 432);
+	if (time()==Math.floor(time())) {
+		var c=document.getElementById("canvas");
+		var ctx=c.getContext("2d");
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+	}
 	rotarytime();
     if (time()==0) {
 		date();
