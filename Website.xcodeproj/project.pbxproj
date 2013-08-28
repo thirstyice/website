@@ -11,7 +11,7 @@
 		D12384C5171F379A00BE66F3 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		D12384C6171F379A00BE66F3 /* rotary.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = rotary.js; sourceTree = "<group>"; };
 		D12384C7171F379A00BE66F3 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		D12384C8171F379A00BE66F3 /* time.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = time.html; sourceTree = "<group>"; };
+		D12384C8171F379A00BE66F3 /* time.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = time.html; path = clock/time.html; sourceTree = SOURCE_ROOT; };
 		D12384CA171F379A00BE66F3 /* ANGLES.8xp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ANGLES.8xp; sourceTree = "<group>"; };
 		D12384CB171F379A00BE66F3 /* BINCONV.8xp */ = {isa = PBXFileReference; lastKnownFileType = file; path = BINCONV.8xp; sourceTree = "<group>"; };
 		D12384CC171F379A00BE66F3 /* BTRIG.8xp */ = {isa = PBXFileReference; lastKnownFileType = file; path = BTRIG.8xp; sourceTree = "<group>"; };
@@ -27,7 +27,6 @@
 		D12384D6171F379A00BE66F3 /* ID.8xp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ID.8xp; sourceTree = "<group>"; };
 		D12384D7171F379A00BE66F3 /* INTERSEC.8xp */ = {isa = PBXFileReference; lastKnownFileType = file; path = INTERSEC.8xp; sourceTree = "<group>"; };
 		D12384D8171F379A00BE66F3 /* ISOTRIG.8xp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ISOTRIG.8xp; sourceTree = "<group>"; };
-		D12384D9171F379A00BE66F3 /* mdtime-2_0_3.tar.gzip */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mdtime-2_0_3.tar.gzip"; sourceTree = "<group>"; };
 		D12384DA171F379A00BE66F3 /* MFQT.8xp */ = {isa = PBXFileReference; lastKnownFileType = file; path = MFQT.8xp; sourceTree = "<group>"; };
 		D12384DB171F379A00BE66F3 /* MIXRAD.8xp */ = {isa = PBXFileReference; lastKnownFileType = file; path = MIXRAD.8xp; sourceTree = "<group>"; };
 		D12384DC171F379A00BE66F3 /* MIXRADFR.8xp */ = {isa = PBXFileReference; lastKnownFileType = file; path = MIXRADFR.8xp; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		D12384FB171F379A00BE66F3 /* server.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = server.html; sourceTree = "<group>"; };
 		D12384FC171F379A00BE66F3 /* south.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = south.html; sourceTree = "<group>"; };
 		D12384FD171F379A00BE66F3 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		D1D3BD4217CE79B000E6FEA2 /* mdtime-3_0_0.tar.gzip */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mdtime-3_0_0.tar.gzip"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -107,7 +107,7 @@
 				D12384D6171F379A00BE66F3 /* ID.8xp */,
 				D12384D7171F379A00BE66F3 /* INTERSEC.8xp */,
 				D12384D8171F379A00BE66F3 /* ISOTRIG.8xp */,
-				D12384D9171F379A00BE66F3 /* mdtime-2_0_3.tar.gzip */,
+				D1D3BD4217CE79B000E6FEA2 /* mdtime-3_0_0.tar.gzip */,
 				D12384DA171F379A00BE66F3 /* MFQT.8xp */,
 				D12384DB171F379A00BE66F3 /* MIXRAD.8xp */,
 				D12384DC171F379A00BE66F3 /* MIXRADFR.8xp */,
