@@ -46,9 +46,6 @@ ctx.stroke();
 
 if (time()==Math.floor(time())) {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	var w = canvas.width;
-	canvas.width = 1;
-	canvas.width = w;
 	rotarytime();
 }
 }
