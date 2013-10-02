@@ -57,6 +57,7 @@
 		D12384FB171F379A00BE66F3 /* server.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = server.html; sourceTree = "<group>"; };
 		D12384FC171F379A00BE66F3 /* south.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = south.html; sourceTree = "<group>"; };
 		D12384FD171F379A00BE66F3 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		D151FF8B17FBEA5C00A344EA /* POLYDIV.8xp */ = {isa = PBXFileReference; lastKnownFileType = file; path = POLYDIV.8xp; sourceTree = "<group>"; };
 		D1D3BD4217CE79B000E6FEA2 /* mdtime-3_0_0.tar.gzip */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mdtime-3_0_0.tar.gzip"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +114,7 @@
 				D12384DC171F379A00BE66F3 /* MIXRADFR.8xp */,
 				D12384DD171F379A00BE66F3 /* MULTIPLE.8xp */,
 				D12384DE171F379A00BE66F3 /* ORDDATE.8xp */,
+				D151FF8B17FBEA5C00A344EA /* POLYDIV.8xp */,
 				D12384DF171F379A00BE66F3 /* PRIMEFAC.8xp */,
 				D12384E0171F379A00BE66F3 /* PRIMFIND.8xp */,
 				D12384E1171F379A00BE66F3 /* QUADCONV.8xp */,
