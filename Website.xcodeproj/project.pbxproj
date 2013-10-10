@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		D106A68A18073BB900BDBDBC /* universal.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = universal.js; sourceTree = "<group>"; tabWidth = 1; };
+		D106A68B18073E8600BDBDBC /* menu.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = menu.html; sourceTree = "<group>"; };
 		D12384C4171F379A00BE66F3 /* clock.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = clock.css; sourceTree = "<group>"; };
 		D12384C5171F379A00BE66F3 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		D12384C6171F379A00BE66F3 /* rotary.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = rotary.js; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 				D12384EB171F379A00BE66F3 /* jquery.js */,
 				D12384EC171F379A00BE66F3 /* more_info */,
 				D12384F3171F379A00BE66F3 /* resize.js */,
+				D106A68A18073BB900BDBDBC /* universal.js */,
+				D106A68B18073E8600BDBDBC /* menu.html */,
 				D12384F4171F379A00BE66F3 /* roll.js */,
 				D12384F5171F379A00BE66F3 /* rules */,
 				D12384FD171F379A00BE66F3 /* style.css */,
