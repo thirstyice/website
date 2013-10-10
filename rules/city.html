@@ -8,6 +8,7 @@
 <html>
 	<head>
 		<script src="../jquery.js"></script>
+		<script>$( document ).ready(function() { $("#menuHere").load( "menu.html" ); });</script>
 		<script src="../roll.js"></script>
 		<script src="../resize.js"></script>
 		<meta charset="UTF-8">
@@ -15,30 +16,7 @@
 		<link rel="stylesheet" href="rules.css"/>
 	</head>
 	<body onresize="resize()">
-		<ul id="menu">
-            <li><a href="../index.html">Polar clock</a></li>
-			<li><a href="../clock/time.html">Text clock</a></li>
-			<li>
-                <a href="#">Minecraft Rules</a>
-                <ul id="server">
-                    <li><a href="../rules/server.html">Serverwide</a></li>
-                    <li><a href="../rules/city.html">The City</a></li>
-                    <li><a href="../rules/north.html">North Mountainous Rep.</a></li>
-                    <li><a href="../rules/south.html">South Mountainous Rep.</a></li>
-                    <!--<li><a href="#">Shambala</a></li>-->
-                    <li><a href="../rules/cameron.html">Cameron's place</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Programs</a>
-                <ul id="down">
-                    <li><a href="../Downloads/downloads.html">Downloads</a></li>
-                    <!--<li><a href="../roll.html">Requests</a></li>-->
-                </ul>
-            </li>
-            <li><a href="#" onClick="roll()">Pervolvo</a></li>
-			<li><a href="../more_info/info.html">More info</a></li>
-        </ul>
+		<a id="menuHere">There is supposed to be a menu here, but your browser doesn't support it. And thats too bad. Now you can't navigate</a>
 		<h1>City Rules</h1>
 		<ol>
 			<li class="main">
