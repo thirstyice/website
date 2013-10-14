@@ -11,13 +11,14 @@
 		<script src="jquery.js"></script>
 		<script>$( document ).ready(function() { $("#menuHere").load( "menu.html" ); });</script>
 		<script src="resize.js"></script>
-		<script src="roll.js"></script>
 		<script src="clock/rotary.js"></script>
 		<link rel="stylesheet" type="text/css" href="clock/clock.css"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 	</head>
     <body onresize="resize()">
-		<a id="menuHere">There is supposed to be a menu here, but your browser doesn't support it. And thats too bad. Now you can't navigate</a>
+		<a id="menuHere">There is supposed to be a menu here, but your browser doesn't support it. And thats too bad. Now you can't navigate
+			<br/>
+		</a>
         <div id="timezones"  class="panel" width="750px">
 			<a>Longitude:</a>
             <input id="txtbox" type="text" size="3"/>
@@ -30,17 +31,17 @@
             <br/>
             <img src="clock/map.png" usemap="#timemap"></img>
             <map name="timemap">
-                <area shape="rect" coords="0,0,22,350" onClick="area1()"/>
-                <area shape="rect" coords="22,0,95,350" onClick="area2()"/>
-                <area shape="rect" coords="95,0,170,350" onClick="area3()"/>
-                <area shape="rect" coords="170,0,240,350" onClick="area4()"/>
-                <area shape="rect" coords="240,0,310,350" onClick="area5()"/>
-                <area shape="rect" coords="310,0,383,350" onClick="area6()"/>
-                <area shape="rect" coords="383,0,454,350" onClick="area7()"/>
-                <area shape="rect" coords="454,0,526,350" onClick="area8()"/>
-                <area shape="rect" coords="526,0,597,350" onClick="area9()"/>
-                <area shape="rect" coords="597,0,669,350" onClick="area10()"/>
-                <area shape="rect" coords="669,0,750,350" onClick="area1()"/>        
+                <area shape="rect" coords="0,0,22,350" onClick="area(-2)"/>
+                <area shape="rect" coords="22,0,95,350" onClick="area(-1)"/>
+                <area shape="rect" coords="95,0,170,350" onClick="area(0)"/>
+                <area shape="rect" coords="170,0,240,350" onClick="area(1)"/>
+                <area shape="rect" coords="240,0,310,350" onClick="area(2)"/>
+                <area shape="rect" coords="310,0,383,350" onClick="area(3)"/>
+                <area shape="rect" coords="383,0,454,350" onClick="area(4)"/>
+                <area shape="rect" coords="454,0,526,350" onClick="area(5)"/>
+                <area shape="rect" coords="526,0,597,350" onClick="area(-4)"/>
+                <area shape="rect" coords="597,0,669,350" onClick="area(-3)"/>
+                <area shape="rect" coords="669,0,750,350" onClick="area(-2)"/>
             </map>
         </div>
 		<a href="#" id="recalc">Timezones</a>

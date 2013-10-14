@@ -8,15 +8,17 @@
 <html>
     <head>
 		<script src="../jquery.js"></script>
-		<script>$( document ).ready(function() { $("#menuHere").load( "menu.html" ); });</script>
+		<script>$( document ).ready(function() { $("#menuHere").load( "../menu.html" ); });</script>
 		<script src="../roll.js"></script>
 		<script src="../resize.js"></script>
         <meta charset="UTF-8">
 		<link rel="stylesheet" href="../style.css">
 		<link rel="stylesheet" href="rules.css">
     </head>
-	<body>
-		<a id="menuHere">There is supposed to be a menu here, but your browser doesn't support it. And thats too bad. Now you can't navigate</a>
+	<body onresize="resize()">
+		<a id="menuHere">There is supposed to be a menu here, but your browser doesn't support it. And thats too bad. Now you can't navigate
+			<br/>
+		</a>
 		<h1>Rules for Cameron's place</h1>
 		<ol>
 			<li class="main">

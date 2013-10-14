@@ -61,45 +61,9 @@ function timezone() {
     }
     $("#recalc").html("Timezone: "+zone);
 }
-function area1(){
-    zone = -200;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area2() {
-    zone = -100;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area3() {
-    zone = 0;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area4() {
-    zone = 100;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area5() {
-    zone = 200;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area6() {
-    zone = 300;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area7() {
-    zone = 400;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area8() {
-    zone = 500;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area9() {
-    zone = -400;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area10() {
-    zone = -300;
-    $("#recalc").html("Timezone: "+zone);
+function area(input) {
+	zone=input*100;
+	$("#recalc").html("Timezone: "+zone);
 }
 function time() {
 	var today = new Date();

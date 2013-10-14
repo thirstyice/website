@@ -6,52 +6,49 @@
 var week;
 var day;
 function rotarytime() {
-var c=document.getElementById("canvas");
-var ctx=c.getContext("2d");
-//Inner circle, day
-ctx.beginPath();
-ctx.arc(1120,1120,200,1.5*Math.PI,day*(Math.PI/2.5)-1.5);
-ctx.lineWidth = 150;
-ctx.strokeStyle = '#00ce00';
-ctx.stroke();
+	var c=document.getElementById("canvas");
+	var ctx=c.getContext("2d");
+	//Inner circle, day
+	ctx.beginPath();
+	ctx.arc(1120,1120,200,1.5*Math.PI,day*(Math.PI/2.5)-1.5);
+	ctx.lineWidth = 150;
+	ctx.strokeStyle = '#00ce00';
+	ctx.stroke();
 
-//2nd circle, week 
-ctx.beginPath();
-ctx.arc(1120,1120,400,1.5*Math.PI,week*(Math.PI/36.5)-1.5);
-ctx.lineWidth = 150;
-ctx.strokeStyle = '#00ce00';
-ctx.stroke();
+	//2nd circle, week
+	ctx.beginPath();
+	ctx.arc(1120,1120,400,1.5*Math.PI,week*(Math.PI/36.5)-1.5);
+	ctx.lineWidth = 150;
+	ctx.strokeStyle = '#00ce00';
+	ctx.stroke();
 
-//3rd circle, decidays
-ctx.beginPath();
-ctx.arc(1120,1120,600,1.5*Math.PI,Math.floor(time()/100)*(Math.PI/5)-1.5);
-ctx.lineWidth = 150;
-ctx.strokeStyle = '#00ce00';
-ctx.stroke();
+	//3rd circle, decidays
+	ctx.beginPath();
+	ctx.arc(1120,1120,600,1.5*Math.PI,Math.floor(time()/100)*(Math.PI/5)-1.5);
+	ctx.lineWidth = 150;
+	ctx.strokeStyle = '#00ce00';
+	ctx.stroke();
 
-//4th circle, millidays
-ctx.beginPath();
-ctx.arc(1120,1120,800,1.5*Math.PI,(((time()/100)-(Math.floor(time()/100)))*100)*(Math.PI/50.5)-1.5);
-ctx.lineWidth = 150;
-ctx.strokeStyle = '#00ce00';
-ctx.stroke();
+	//4th circle, millidays
+	ctx.beginPath();
+	ctx.arc(1120,1120,800,1.5*Math.PI,(((time()/100)-(Math.floor(time()/100)))*100)*(Math.PI/50.5)-1.5);
+	ctx.lineWidth = 150;
+	ctx.strokeStyle = '#00ce00';
+	ctx.stroke();
 
-//5th circle, nanodays
-ctx.beginPath();
-ctx.arc(1120,1120,1000,1.5*Math.PI,((time()-(Math.floor(time())))*100)*(Math.PI/50.5)-1.5);
-ctx.lineWidth = 150;
-ctx.strokeStyle = '#00ce00';
-ctx.stroke();
-
-
-
+	//5th circle, nanodays
+	ctx.beginPath();
+	ctx.arc(1120,1120,1000,1.5*Math.PI,((time()-(Math.floor(time())))*100)*(Math.PI/50.5)-1.5);
+	ctx.lineWidth = 150;
+	ctx.strokeStyle = '#00ce00';
+	ctx.stroke();
 }
 
-
 $(document).ready(function () {
-	$("#recalc").click(function(){
+	$("#recalc").click(function(){ // Opens / closes the timezone panel
 		$("#timezones").slideToggle("slow");
 	});
+
     $("#recalc").html("Timezone: "+zone);
 	date();
 	run();
@@ -61,7 +58,7 @@ var zone = 0;
 var sendinvalidlong;
 var longitude;
 
-function timezone() {
+function timezone() { // Sets the zone based on longitude. This could probably be done better
     var txtbox = document.getElementById("txtbox").value;
     var hemisphere = document.getElementById("hemisphere").selectedIndex;
     var hemisphere = document.getElementsByTagName("option")[hemisphere].value
@@ -114,47 +111,18 @@ function timezone() {
     }
     $("#recalc").html("Timezone: "+zone);
 }
-function area1(){
-    zone = -200;
-    $("#recalc").html("Timezone: "+zone);
+function area(input) {
+	// Set the zone
+	zone=input*100;
+	$("#recalc").html("Timezone: "+zone);
+	var c=document.getElementById("canvas");
+	
+	// And reset the canvas
+	var ctx=c.getContext("2d");
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
-function area2() {
-    zone = -100;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area3() {
-    zone = 0;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area4() {
-    zone = 100;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area5() {
-    zone = 200;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area6() {
-    zone = 300;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area7() {
-    zone = 400;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area8() {
-    zone = 500;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area9() {
-    zone = -400;
-    $("#recalc").html("Timezone: "+zone);
-}
-function area10() {
-    zone = -300;
-    $("#recalc").html("Timezone: "+zone);
-}
-function time() {
+
+function time() { // Returns the current time
 	var today = new Date();
 	var time = (Math.floor(((today.getUTCHours() * 60 * 60 * 1000) + (today.getUTCMinutes() * 60 * 1000) + (today.getUTCSeconds() * 1000) + today.getUTCMilliseconds()) / 864 + (zone * 100)));
     time += -25000;
@@ -168,15 +136,18 @@ function time() {
     return time;
 }
 
-function run() {
+function run() { // Updates the clock every 432 ms
 	var t = setTimeout('run()', 432);
-	if (time()==Math.floor(time())) {
+	
+	if (time()==Math.floor(time())) { //Refreshes the canvas when the clock reaches zero
 		var c=document.getElementById("canvas");
 		var ctx=c.getContext("2d");
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 	}
+	
 	rotarytime();
-    if (time()==0) {
+	
+    if (time()==0) { // Updates the date only when the time is zero (saves memory)
 		date();
 	}
 }

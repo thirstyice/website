@@ -1,0 +1,93 @@
+/*Copyright (c) 2013 Tauran Wood*/ 
+
+/*Copying and distribution of this file, with or without modification, is permitted in any medium without royalty provided the copyright notice and this notice are preserved.*/
+
+/*This file is offered as-is,without warranty of any kind.*/
+
+@font-face {
+	font-family: Digital;
+	src: url('DS-DIGI.TTF');
+}
+#server li a{
+    width:200px !important;
+}
+#down li a{
+	width:99px !important;
+}
+#menu,
+#menu ul {
+    list-style: none;
+}
+#menu {
+	height:40px;
+    width:100%;
+	margin-top:0;
+	margin-bottom:10px;
+	padding-left:0;
+}
+#menu > li {
+    float: left;
+}
+#menu li a {
+	display: block;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 1em;
+    text-decoration: none;
+}
+#menu ul {
+    position: absolute;
+    display: none;
+    z-index: 999;
+    left:auto;
+    padding:0;
+	overflow-y:auto;
+	overflow-x:visible !important;
+}
+#menu ul li a {
+    width: 80px;
+}
+#menu li:hover ul {
+    display: block;
+}
+/* Main menu
+------------------------------------------*/
+#menu {
+    font-size:20px;
+    background: #353535;
+	font-family: Digital;
+}
+#menu > li > a {
+    color: #00ce00;
+    font-weight: bold;
+}
+#menu > li:hover > a {
+    background: #00ce00;
+    color: #000;
+}
+ 
+/* Submenu
+------------------------------------------*/
+#menu ul {
+    background: #70ce00;
+}
+#menu ul li a {
+    color: #000;
+	text-align:left;
+}
+#menu ul li:hover a {
+    background: #508000;
+}
+
+
+
+.roll {
+-webkit-transition: -webkit-transform 4s;
+-webkit-transform: rotate(360deg);
+-moz-transition: -moz-transform 4s;
+-moz-transform: rotate(360deg);
+-o-transition: -o-transform 4s;
+-o-transform: rotate(360deg);
+transition: transform 4s;
+transform: rotate(360deg);
+}
