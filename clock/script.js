@@ -5,59 +5,76 @@
 "use strict";
 
 var zone = 0
-var sendinvalidlong
-var longitude
+
+function date() {
+	var today = new Date();
+	var first = new Date(today.getFullYear(), 0, 1);
+	var Ord = Math.round(((today - first) / 1000 / 60 / 60 / 24) + .5, 0);
+    var year = today.getFullYear()
+    if ((year %4 == 0 && (year % 100 != 0 || year % 400 == 0)) && today.getMonth >1) {
+        Ord+=1
+    }
+    if (Ord == 366) {
+		return 0; 	
+	}
+	else {
+		if (Ord/5 == Math.floor(Ord/5)){
+			Ord -= 0.01
+		}
+		return (Ord)/5;
+	}
+}
+
+function rotarytime() {
+	var c=document.getElementById("canvas");
+	var ctx=c.getContext("2d");
+	ctx.lineWidth = 150;
+	ctx.strokeStyle = '#00ce00';
+	if (time()==Math.floor(time())) { //Refreshes the canvas when the clock reaches zero
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+	}
+	//Inner circle, day
+	ctx.beginPath();
+	ctx.arc(1120,1120,200,1.5*Math.PI,Math.round((date() - Math.floor(date()))*5)*(Math.PI/2.5)-1.5);
+	ctx.stroke();
+
+	//2nd circle, week
+	ctx.beginPath();
+	ctx.arc(1120,1120,400,1.5*Math.PI,Math.floor(date())*(Math.PI/36.5)-1.5);
+	ctx.stroke();
+
+	//3rd circle, decidays
+	ctx.beginPath();
+	ctx.arc(1120,1120,600,1.5*Math.PI,Math.floor(time()/100)*(Math.PI/5)-1.5);
+	ctx.stroke();
+
+	//4th circle, millidays
+	ctx.beginPath();
+	ctx.arc(1120,1120,800,1.5*Math.PI,(((time()/100)-(Math.floor(time()/100)))*100)*(Math.PI/50.5)-1.5);
+	ctx.stroke();
+
+	//5th circle, nanodays
+	ctx.beginPath();
+	ctx.arc(1120,1120,1000,1.5*Math.PI,((time()-(Math.floor(time())))*100)*(Math.PI/50.5)-1.5);
+	ctx.stroke();
+}
+
 
 function timezone() {
     var txtbox = document.getElementById("txtbox").value;
     var hemisphere = document.getElementById("hemisphere").selectedIndex;
-    var hemisphere = document.getElementsByTagName("option")[hemisphere].value
-    longitude = txtbox
+    var hemisphere = document.getElementsByTagName("option")[hemisphere].value;
+    var longitude = txtbox;
     if (hemisphere == "West"){
-        if (longitude > 180 ){
-            $("#recalc").html("Timezone: "+zone);
-        }
-        if (longitude > 168 && longitude <= 180){
-            zone = -200;
-        }
-        if (longitude <= 168 && longitude > 132){
-            zone = -100;
-        }
-        if (longitude <= 132 && longitude > 96){
-            zone = 0;
-        }
-        if (longitude <= 96 && longitude > 60){
-            zone = 100;
-        }
-        if (longitude <= 60 && longitude > 24){
-            zone = 200;
-        }
-        if (longitude <= 24){
-            zone = 300;
-        }
+    	longitude *= -1;
     }
-    if (hemisphere == "East"){
-        if (longitude > 180){
-            $("#recalc").html("Timezone: "+zone);
-        }
-        if (longitude >156 && longitude <= 180){
-            zone = -200;
-        }
-        if (longitude <= 156 && longitude > 120){
-            zone = -300;
-        }
-        if (longitude <= 120 && longitude > 84){
-            zone = -400;
-        }
-        if (longitude <= 84 && longitude > 48){
-            zone = 500;
-        }
-        if (longitude <= 48 && longitude > 12){
-            zone = 400;
-        }
-        if (longitude <= 12 && longitude >= 0){
-            zone = 300;
-        }
+    longitude -= 12
+    zone = Math.floor((longitude / 36) +4)*100;
+    while (zone>500) {
+    	zone -= 500;
+    }
+    while (zone<-500) {
+    	zone += 500;
     }
     $("#recalc").html("Timezone: "+zone);
 }
@@ -85,28 +102,13 @@ function run() {
 	var t = setTimeout('run()', 432);
 	$("#clock").html(time()  + " md");
 	$("#title").html(time()  + " md");
+	rotarytime();
     if (time()==0) {
-		$("#date").html(date());
+		$("#date").html((Math.floor(date())) + "/" + (Math.round((date() - Math.floor(date()))*5)));
 	}
 }
 
-function date() {
-	var today = new Date();
-	var first = new Date(today.getFullYear(), 0, 1);
-	var Ord = Math.round(((today - first) / 1000 / 60 / 60 / 24) + .5, 0);
-    var year = today.getFullYear()
-    if ((year %4 == 0 && (year % 100 != 0 || year % 400 == 0)) && today.getMonth >1) {
-        Ord+=1
-    }
-    var week = Math.floor((Ord-1)/5);
-    var day = Ord-(5*week);
-    if (Ord != 366) {
-        return week + "/" + day;
-    }
-    else {
-        return "Leap day"
-    }
-}
+
 
 $(document).ready(function () {
 	$("#recalc").click(function(){
@@ -115,7 +117,7 @@ $(document).ready(function () {
 	$("#thing").html("The current time is:");
 	$("#otherthing").html("The current date is:");
 	$("#pizza").html("");
-	$("#date").html(date());
+	$("#date").html((Math.floor(date())) + "/" + (Math.round((date() - Math.floor(date()))*5)));
     $("#recalc").html("Timezone: "+zone);
 	run();
 });
