@@ -6,7 +6,7 @@
 
 @font-face {
 	font-family: Digital;
-	src: url('../DS-DIGI.TTF');
+	src: url('/DS-DIGI.TTF');
 }
 body{
 	text-align:center;

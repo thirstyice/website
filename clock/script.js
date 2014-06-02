@@ -27,6 +27,7 @@ function date() {
 
 function rotarytime() {
 	var c=document.getElementById("canvas");
+	if (c==null) return;
 	var ctx=c.getContext("2d");
 	ctx.lineWidth = 150;
 	ctx.strokeStyle = '#00ce00';
